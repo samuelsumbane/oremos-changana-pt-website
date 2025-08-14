@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://samuelsumbane.github.io/oremos-catolico-website/sitemap.xml
