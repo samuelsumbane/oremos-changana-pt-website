@@ -1,0 +1,226 @@
+:root {
+    --principal: #10B981;
+    --primary: #fff;
+    --onPrimary: #070711;
+    --secondary: #F5F5F5;
+    --hoverText: #0D5948;
+}
+
+.dark-mode:root {
+    --primary: #24292E;
+    --onPrimary: aliceblue;
+    --secondary: #2A3843;
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+
+h2 { padding: 10px; }
+
+body {
+    background:var(--primary);
+    width: 100%;
+    font-size: sans-serif;
+    color: var(--onPrimary);
+}
+
+nav {
+    display:flex;
+    /*background:green;*/
+    width:80%;
+    margin: 0 auto;
+    height:60px;
+    justify-content: space-between;
+    align-items:center;
+}
+
+nav ul {
+    list-style:none;
+    display:inline-flex;
+    gap:60px;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
+nav ul li a, .link-like-text {
+    text-decoration: none;
+    color: var(--onPrimary);
+}
+
+nav ul li a:hover, .link-like-text:hover {
+    color: var(--hoverText);
+    transition: 0.5s;
+}
+
+.active-page {
+    color:var(--principal) !important;
+}
+
+.changeMode {
+    width:30px;
+    height: 30px;
+    border:none;
+    background-color: transparent;
+    background-image: url("images/icons/sun-fill.svg");
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+
+.dark-icon {
+    background-image: url("images/icons/moon-fill.svg") !important;
+}
+
+#main-top {
+    margin: 10% auto 0 auto;
+    width: 80%;
+    /*background:tomato;*/
+    display:flex;
+    justify-content: space-around
+}
+
+#site-description-div {
+    /*background:blue;*/
+    /*height:190px;*/
+    padding:50px;
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+#buttonToPlayStore, #download-oremos-apk{
+    background:var(--principal);
+    width:170px;
+    color:white;
+    border:none;
+    padding:8px;
+    border-radius:8px;
+}
+
+#buttonToPlayStore:hover, #download-oremos-apk:hover {
+    background: var(--hoverText);
+    transition: 0.8s;
+}
+
+#main-center, .comments {
+    width:80%;
+    max-width:700px;
+    /*background:red;*/
+    margin:120px auto;
+    display: flex;
+    justify-content: space-around
+}
+
+.functionality {
+    display: flex;
+    flex-direction:column;
+    width:140px;
+    /*background:purple;*/
+    gap:20px;
+    text-align:center;
+}
+
+#main-bottom div {
+    padding:20px;
+    width:90%;
+    background: var(--secondary);
+    margin: 20px auto 0 auto;
+    overflow-x:auto;
+    /*height:200px;*/
+    display: flex;
+    gap:50px;
+    box-shadow: 0 0 14px 8px rgba(0, 0, 0, .2);
+}
+
+#main-bottom h2 {
+    padding: 50px;
+}
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 15%;
+    width: 96%;
+    /*background-color: yellow; */
+    padding:20px;
+    color: var(--onPrimary);
+    font-size: 14px;
+    display: flex;
+}
+
+.footer-left div, .footer-top, .footer-bottom{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-left, .footer-right {
+    width: 30%;
+    /*background: purple;*/
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-left div {
+    margin-right: auto;
+}
+
+.footer-right {
+    width: 66%;
+    /* background:blue !important; */
+    justify-content: space-between;
+}
+
+.footer-bottom {
+    justify-content: space-evenly;
+}
+
+.footer-top div {
+    display: flex;
+    gap: 10px
+}
+
+.scrolled::-webkit-scrollbar{
+    width:8px;
+    background:transparent;
+}
+
+.scrolled::-webkit-scrollbar-thumb{
+    width:8px;
+    border-radius: 8px;
+    background: gray;
+}
+
+@media (width <= 480px) {
+    body {
+        /* background: red; */
+    }
+
+    #main-top, #main-center, .comments {
+        width: 100%;
+        /* background: blue; */
+        flex-direction: column;
+        align-items: center;
+        gap: 120px;
+    }
+
+    #main-bottom {
+        /* background: purple; */
+        margin: 30% 0;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* #mission-content, .simple-card {
+        width: 80%;
+    } */
+}

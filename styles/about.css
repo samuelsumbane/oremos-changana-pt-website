@@ -1,0 +1,38 @@
+#about-app-content{
+    width:54%;
+    background:transparent;
+    margin: 140px auto;
+}
+
+#about-app-title {
+    text-transform: uppercase;
+    text-align:center;
+    font-size: max(40px, 3vw);
+}
+
+#about-app-text {
+    text-align: center;
+    padding: 20px;
+    /* background: green; */
+}
+
+#mission-content {
+    width: clamp(200px, 50%, 600px);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    margin: 0 auto;
+}
+
+.simple-card {
+    width: clamp(200px, 50%, 600px);
+    padding: 10px;
+    margin: 10% auto;
+}
+
+
+@media (width >= 480px) {
+    #about-app-content {
+        width: 80%;
+    }
+}

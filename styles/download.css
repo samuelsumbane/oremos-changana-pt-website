@@ -1,0 +1,46 @@
+
+.platform {
+    display: flex;
+    flex-direction: column;
+    background:transparent;
+    justify-content:center;
+}
+
+.platform span {
+    color: gray;
+    font-size: 12px;
+    text-align: center;
+}
+
+.platform-name {
+    text-align:center;
+    padding: 13px;
+}
+
+.download-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.comments {
+    flex-direction: column;
+    gap: 50px;
+}
+
+.user-comment {
+    width: clamp(500px, 70%, 900px);
+    background: var(--secondary);
+    padding: 14px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.user-comment > div {
+    display: flex;
+    gap: 30%;
+    margin-bottom:20px;
+}
+
+.stars { color: gold }
