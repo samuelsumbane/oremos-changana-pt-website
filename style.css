@@ -126,13 +126,17 @@ nav ul li a:hover, .link-like-text:hover {
 #main-bottom div {
     padding:20px;
     width:90%;
-    background: var(--secondary);
+    background: transparent;
     margin: 20px auto 0 auto;
     overflow-x:auto;
     /*height:200px;*/
     display: flex;
     gap:50px;
     box-shadow: 0 0 14px 8px rgba(0, 0, 0, .2);
+}
+
+#main-bottom div img {
+    padding: 0 3%;
 }
 
 #main-bottom h2 {
@@ -197,10 +201,17 @@ footer {
     background: gray;
 }
 
+.link-to-outline-btn {
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid var(--principal);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--principal);
+
+}
+
 @media (width <= 480px) {
-    body {
-        /* background: red; */
-    }
 
     #main-top, #main-center, .comments {
         width: 100%;
@@ -210,15 +221,16 @@ footer {
         gap: 120px;
     }
 
-    #main-bottom {
-        /* background: purple; */
-        margin: 30% 0;
-    }
+    #main-bottom { margin: 30% 0; }
+
+    #main-bottom div { width: 100% }
 
     footer {
         flex-direction: column;
         gap: 40px;
     }
+
+    .footer-left, .footer-right { width: 100%; }
 
     /* #mission-content, .simple-card {
         width: 80%;

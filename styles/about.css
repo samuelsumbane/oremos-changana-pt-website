@@ -13,7 +13,6 @@
 #about-app-text {
     text-align: center;
     padding: 20px;
-    /* background: green; */
 }
 
 #mission-content {
@@ -30,9 +29,11 @@
     margin: 10% auto;
 }
 
+.simple-card p { margin-bottom: 6%; }
 
-@media (width >= 480px) {
-    #about-app-content {
-        width: 80%;
+@media (width <= 480px) {
+    #about-app-content { width: 90%; }
+    #mission-content, .simple-card, .user-comment {
+        width: 80% !important;
     }
 }
