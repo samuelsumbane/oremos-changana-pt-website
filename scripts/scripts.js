@@ -1,6 +1,9 @@
 const html = document.querySelector('html')
 const changeMode = document.querySelector('.changeMode')
 
+const linkList = document.querySelector('.link-list')
+const menu = document.querySelector('#menu-button')
+
 // Look for oremosWebisiteMode in localStorage
 if (localStorage.getItem('oremosWebisiteMode') === null) {
     localStorage.setItem('oremosWebisiteMode', "false")
@@ -26,6 +29,11 @@ changeMode.addEventListener('click', () => {
         localStorage.setItem('oremosWebisiteMode', "true")
     }
     changeMode.classList.toggle('dark-icon')
+})
+
+menu.addEventListener('click', () => {
+    linkList.classList.toggle('showMenu')
+    menu.classList.toggle('active-menu')
 })
 
 

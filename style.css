@@ -12,6 +12,8 @@
     --secondary: #2A3843;
 }
 
+*, *::before, *::after { box-sizing: border-box; }
+
 *{
     padding:0;
     margin:0;
@@ -19,16 +21,18 @@
 
 h2 { padding: 10px; }
 
-body {
+html, body{
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    background:aliceblue;
     background:var(--primary);
-    width: 100%;
     font-size: sans-serif;
     color: var(--onPrimary);
 }
 
 nav {
     display:flex;
-    /*background:green;*/
     width:80%;
     margin: 0 auto;
     height:60px;
@@ -42,9 +46,7 @@ nav ul {
     gap:60px;
 }
 
-nav ul li {
-    cursor: pointer;
-}
+nav ul li { cursor: pointer; }
 
 nav ul li a, .link-like-text {
     text-decoration: none;
@@ -55,6 +57,12 @@ nav ul li a:hover, .link-like-text:hover {
     color: var(--hoverText);
     transition: 0.5s;
 }
+
+nav .link-like-text {
+    font-size: clamp(20px, 1.4vw, 60px);
+}
+
+#menu-button { display: none; }
 
 .active-page {
     color:var(--principal) !important;
@@ -77,14 +85,11 @@ nav ul li a:hover, .link-like-text:hover {
 #main-top {
     margin: 10% auto 0 auto;
     width: 80%;
-    /*background:tomato;*/
     display:flex;
-    justify-content: space-around
+    justify-content: space-around;
 }
 
 #site-description-div {
-    /*background:blue;*/
-    /*height:190px;*/
     padding:50px;
     display:flex;
     flex-direction: column;
@@ -108,7 +113,6 @@ nav ul li a:hover, .link-like-text:hover {
 #main-center, .comments {
     width:80%;
     max-width:700px;
-    /*background:red;*/
     margin:120px auto;
     display: flex;
     justify-content: space-around
@@ -118,7 +122,6 @@ nav ul li a:hover, .link-like-text:hover {
     display: flex;
     flex-direction:column;
     width:140px;
-    /*background:purple;*/
     gap:20px;
     text-align:center;
 }
@@ -129,7 +132,6 @@ nav ul li a:hover, .link-like-text:hover {
     background: transparent;
     margin: 20px auto 0 auto;
     overflow-x:auto;
-    /*height:200px;*/
     display: flex;
     gap:50px;
     box-shadow: 0 0 14px 8px rgba(0, 0, 0, .2);
@@ -144,12 +146,11 @@ nav ul li a:hover, .link-like-text:hover {
 }
 
 footer {
-    position: relative;
+    /* position: relative;
     left: 0;
-    bottom: 0;
-    margin-top: 15%;
-    width: 96%;
-    /*background-color: yellow; */
+    bottom: 0; */
+    margin: 15% auto 0 auto;
+    width: 90%;
     padding:20px;
     color: var(--onPrimary);
     font-size: 14px;
@@ -164,8 +165,7 @@ footer {
 }
 
 .footer-left, .footer-right {
-    width: 30%;
-    /*background: purple;*/
+    width: 35%;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -176,19 +176,14 @@ footer {
 }
 
 .footer-right {
-    width: 66%;
-    /* background:blue !important; */
-    justify-content: space-between;
+   width: 65%;
+   justify-content: space-between;
 }
 
 .footer-bottom {
     justify-content: space-evenly;
 }
 
-.footer-top div {
-    display: flex;
-    gap: 10px
-}
 
 .scrolled::-webkit-scrollbar{
     width:8px;
@@ -208,14 +203,58 @@ footer {
     border-radius: 10px;
     text-decoration: none;
     color: var(--principal);
-
 }
 
 @media (width <= 480px) {
 
+    nav { width: 100%; }
+
+    nav ul{ display: none; }
+
+    .showMenu {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, .92);
+        padding:30px !important;
+    }
+
+    #menu-button {
+        display: inline;
+         width: 30px;
+        height: 30px;
+        border: none;
+        background-color: var(--principal) ;
+        background-image: url("images/icons/list.svg");
+        background-size: 25px;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        background-position: center;
+        margin-right: 15px;
+    }
+
+    nav ul li:last-child {
+        color: red !important;
+    }
+
+    .active-menu {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-image: url("images/icons/x-circle-fill.svg") !important;
+        background-color: transparent !important;
+        z-index: 2;
+        border: none;
+        border-radius: 50%;
+        font-size: 20px;
+        text-align: center;
+    }
+
     #main-top, #main-center, .comments {
         width: 100%;
-        /* background: blue; */
         flex-direction: column;
         align-items: center;
         gap: 120px;
@@ -223,16 +262,14 @@ footer {
 
     #main-bottom { margin: 30% 0; }
 
-    #main-bottom div { width: 100% }
+    #main-bottom div { width: 100%; }
 
     footer {
+        width: 100%;
         flex-direction: column;
         gap: 40px;
+        padding: 20px;
     }
 
     .footer-left, .footer-right { width: 100%; }
-
-    /* #mission-content, .simple-card {
-        width: 80%;
-    } */
 }

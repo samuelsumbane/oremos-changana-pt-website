@@ -36,4 +36,8 @@
     #mission-content, .simple-card, .user-comment {
         width: 80% !important;
     }
+    /* .comments {
+        width: 100%;
+        margin:20% 0;
+    } */
 }
