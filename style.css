@@ -96,7 +96,7 @@ nav .link-like-text {
     gap:30px;
 }
 
-#buttonToPlayStore, #download-oremos-apk{
+#buttonToPlayStore, .download-oremos-button{
     background:var(--principal);
     width:170px;
     color:white;
@@ -105,7 +105,7 @@ nav .link-like-text {
     border-radius:8px;
 }
 
-#buttonToPlayStore:hover, #download-oremos-apk:hover {
+#buttonToPlayStore:hover, .download-oremos-button:hover {
     background: var(--hoverText);
     transition: 0.8s;
 }

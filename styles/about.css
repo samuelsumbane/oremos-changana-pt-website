@@ -31,6 +31,9 @@
 
 .simple-card p { margin-bottom: 6%; }
 
+#payment-options { margin: -2% 0 0 5%; }
+#payment-options li { padding-bottom: 10px; }
+
 @media (width <= 480px) {
     #about-app-content { width: 90%; }
     #mission-content, .simple-card, .user-comment {
